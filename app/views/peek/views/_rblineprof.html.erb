@@ -1,4 +1,8 @@
 <%= link_to 'Profile', :lineprofiler => true %>
+<% if params[:lineprofiler] %>
+  <span class="lineprof-modal-toggle js-lineprof-modal-toggle">hide</span>
+<% end %>
+
 <div class="peek-dropdown">
   <ul>
     <li><%= link_to 'app', url_for(:lineprofiler => 'app') %></li>
