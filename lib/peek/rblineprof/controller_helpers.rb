@@ -25,7 +25,7 @@ module Peek
         if pygmentize? && lexer.present?
           Pygments.highlight(code, :lexer => lexer_for_filename(file_name))
         else
-          "<pre>#{Rack::Utils.escape_html(code)}</pre>"
+          Rack::Utils.escape_html(code)
         end
       end
 
