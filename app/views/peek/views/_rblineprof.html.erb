@@ -5,10 +5,10 @@
 
 <div class="peek-dropdown">
   <ul>
-    <li><%= link_to 'app', url_for(:lineprofiler => 'app') %></li>
-    <li><%= link_to 'views', url_for(:lineprofiler => 'views') %></li>
-    <li><%= link_to 'gems', url_for(:lineprofiler => 'gems') %></li>
-    <li><%= link_to 'all', url_for(:lineprofiler => 'all') %></li>
-    <li><%= link_to 'stdlib', url_for(:lineprofiler => 'stdlib') %></li>
+    <li><%= link_to 'app', url_for(params.permit!.merge(:lineprofiler => 'app')) %></li>
+    <li><%= link_to 'views', url_for(params.permit!.merge(:lineprofiler => 'views')) %></li>
+    <li><%= link_to 'gems', url_for(params.permit!.merge(:lineprofiler => 'gems')) %></li>
+    <li><%= link_to 'all', url_for(params.permit!.merge(:lineprofiler => 'all')) %></li>
+    <li><%= link_to 'stdlib', url_for(params.permit!.merge(:lineprofiler => 'stdlib')) %></li>
   </ul>
 </div>
